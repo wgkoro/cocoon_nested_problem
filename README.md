@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I made this repo for gem 'cocoon' problem. ( https://github.com/nathanvda/cocoon/issues/405 )
 
-Things you may want to cover:
+## Environment
 
-* Ruby version
+- Ruby 2.4.0
+- Rails 5.0.1
+- cocoon 1.2.9
 
-* System dependencies
+## 1. Prepare project
 
-* Configuration
+```shell
+$ git clone git@github.com:wgkoro/cocoon_nested_problem.git
+$ cd cocoon_nested_problem
+$ bundle install
+$ rake db:migrate
+```
 
-* Database creation
+## 2. Reproduce problem
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Start server with `$ rails s`.
+1. Go to http://localhost:3000/projects/new
+1. Leave blank at least 1 input form, and submit.
