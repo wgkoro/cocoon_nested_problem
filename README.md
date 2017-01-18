@@ -2,6 +2,13 @@
 
 I made this repo for gem 'cocoon' problem. ( https://github.com/nathanvda/cocoon/issues/405 )
 
+# SOLVED (2017/01/19)
+
+Caused by wrong template.
+
+NOT VALID: `<% f.fields_for :detailed_dishes do |detail| %>`
+**VALID**:  `<%= f.fields_for :detailed_dishes do |detail| %>`  (equal was missing)
+
 ## Environment
 
 - Ruby 2.4.0
